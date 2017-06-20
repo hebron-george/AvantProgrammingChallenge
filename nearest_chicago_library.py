@@ -72,16 +72,16 @@ def get_library_popularity(lib, libs):
     percentile100 = np.percentile(zip_counts, 100)
 
     if (nearest_lib_zip_count >= percentile0 and
-        nearest_lib_zip_count < percentile25):
+            nearest_lib_zip_count < percentile25):
         return 1
     elif (nearest_lib_zip_count >= percentile25 and
-    	nearest_lib_zip_count < percentile50):
+          nearest_lib_zip_count < percentile50):
         return 2
     elif (nearest_lib_zip_count >= percentile50 and
-    	nearest_lib_zip_count < percentile75):
+          nearest_lib_zip_count < percentile75):
         return 3
     elif (nearest_lib_zip_count >= percentile75 and
-    	nearest_lib_zip_count <= percentile100):
+          nearest_lib_zip_count <= percentile100):
         return 4
 
 
